@@ -1,33 +1,29 @@
-Base de Datos: Consultas SQL Avanzadas (Farmacia)
-Proyecto de resolución de consultas SQL (DQL) sobre una base de datos relacional de una farmacia. El script incluye 18 ejercicios que abarcan desde filtrados básicos hasta subconsultas complejas y agregaciones.
+Base de Datos: Consultas SQL y Modificación de Datos (Farmacia)
+Proyecto completo de gestión de bases de datos relacionales sobre un sistema de farmacia. El repositorio incluye dos scripts que abarcan desde consultas avanzadas de lectura (DQL) hasta la manipulación de datos (DML), transacciones y control de concurrencia.
 
 Tecnologías y Herramientas
 Motor de Base de Datos: MySQL
 Herramienta de gestión: MySQL Workbench
-Lenguaje: SQL (DQL - Data Query Language)
+Lenguajes: SQL (DQL, DML, TCL)
 
-Conceptos y Funcionalidades Aplicadas
-El script Zafra_Vallejo_Ana_BD_Tarea4.sql contiene la resolución de 18 consultas agrupadas en tres niveles de dificultad:
+Funcionalidades y Conceptos Aplicados
+El proyecto se divide en dos scripts principales:
 
-1.Consultas Básicas (Apartado A):
-Selección y ordenación de datos (ORDER BY).
-Filtros con operadores lógicos (AND, >=, <=, BETWEEN).
-Agrupaciones simples con SUM.
+1. Consultas SQL Avanzadas (Zafra_Vallejo_Ana_BD_Tarea4.sql)
+Consultas de lectura (DQL): Filtros, ordenaciones (ORDER BY), agrupaciones (GROUP BY) y filtros de grupo (HAVING).
+Joins: Uso de INNER JOIN y LEFT JOIN para combinar múltiples tablas.
+Funciones: Uso de agregados (SUM, AVG, MAX, COUNT) y funciones de fecha (DATE_FORMAT, YEAR, MONTHNAME, CURDATE).
+Subconsultas: Subconsultas escalares y tablas derivadas para comparar resultados con medias globales.
 
-2.Consultas Medias (Apartado B):
-Múltiples JOIN (INNER JOIN, LEFT JOIN) para relacionar varias tablas.
-Uso de DISTINCT para evitar duplicados.
-Funciones de fecha: DATE_FORMAT, YEAR, CURDATE(), MONTHNAME.
-Agrupaciones y filtros de grupo (GROUP BY y HAVING).
-Manejo de valores nulos (IS NULL).
-Operadores aritméticos en las consultas.
+2. Modificación de Datos y Transacciones (Zafra_Vallejo_Ana_BD_Tarea5.sql)
+Manipulación de Datos (DML): Inserción (INSERT), actualización (UPDATE) y eliminación (DELETE) de registros basados en condiciones y subconsultas.
+Creación de tablas desde consultas: Uso de CREATE TABLE ... AS e INSERT INTO ... SELECT para generar tablas de resumen (TOP_VENTAS).
+Transacciones y Control de Concurrencia (TCL):
+Uso de START TRANSACTION y ROLLBACK para garantizar la integridad de los datos (deshacer cambios si es necesario).
+Bloqueo de tablas en modo lectura (LOCK TABLES ... READ) para evitar conflictos de escritura simultánea.
 
-3.Consultas Avanzadas (Apartado C):
-Subconsultas escalares (ej. buscar el medicamento más caro con MAX).
-Subconsultas en la cláusula HAVING para comparar con la media de un grupo (tablas derivadas).
-
-🚀 Cómo ejecutar el script
+Cómo ejecutar los scripts
 Abre MySQL Workbench y conéctate a tu servidor local.
-Asegúrate de tener creada e importada la base de datos FARMACIA (con sus tablas y datos).
-Abre el archivo Zafra_Vallejo_Ana_BD_Tarea4.sql.
-Ejecuta el script completo. Los resultados de cada consulta aparecerán en la pestaña "Result Grid".
+Ejecuta el script script_Tarea5_2526.sql (que contiene la creación de la base de datos FARMACIA y la inserción de datos iniciales).
+Ejecuta el archivo Zafra_Vallejo_Ana_BD_Tarea4.sql para ver los resultados de las consultas de lectura.
+Ejecuta el archivo Zafra_Vallejo_Ana_BD_Tarea5.sql para probar las modificaciones, transacciones y bloqueos.
